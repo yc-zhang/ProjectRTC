@@ -29,9 +29,8 @@
     		return new Promise(function(resolve, reject){			
 				try {
 					//camera.stream.stop() no longer works
-          for( var track in camera.stream.getTracks() ){
-            track.stop();
-          }
+					var track = camera.stream.getTracks()[0];
+					track.stop();
 					camera.preview.src = '';
 					resolve();
 				} catch(error) {
