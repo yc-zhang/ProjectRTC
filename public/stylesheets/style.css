@@ -1,4 +1,6 @@
 body {
+  background: url(background.jpg);
+  background-position: 5% 20%;
   padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -12,16 +14,16 @@ table, tr, td, th {margin: 0;border: 0;padding: 5px;border-collapse: collapse;}
 
 li {
     list-style-type: none;
-    border: 2px solid black;
+    border: 2px solid #d58c84;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 3px 3px 3px #888;
+    box-shadow: 5px 5px 5px #dbc;
     padding: 5px 5px 5px 5px;
 }
 
 li:hover {
   cursor: pointer;
-  background-color: #aaa;
+  background-color: #fff0f5;
 }
 
 .localStream {
