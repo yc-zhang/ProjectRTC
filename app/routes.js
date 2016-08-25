@@ -1,7 +1,7 @@
 module.exports = function(app, streams) {
 
   // GET home 
-  var index = function(req, res) {
+  var streams = function(req, res) {
     res.render('index', { 
                           title: 'Project RTC', 
                           header: 'WebRTC live streaming',
@@ -21,7 +21,13 @@ module.exports = function(app, streams) {
     res.status(200).json(data);
   };
 
+  var welcome = function (req, res) {
+      res.render('welcome', {title: 'Ruak Streams: welcome and talk to the others.'});
+  };
+
   app.get('/streams.json', displayStreams);
-  app.get('/', index);
-  app.get('/:id', index);
-}
+  app.get('/', welcome);
+  app.get('/streams', streams);
+  // app.get('/', index);
+  app.get('/streams/:id', streams);
+};
