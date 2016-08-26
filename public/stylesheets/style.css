@@ -1,7 +1,4 @@
 body {
-  /*background: url(background.jpg);*/
-  /*background-position: 5% 20%;*/
-  /*padding: 30px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -14,10 +11,9 @@ table, tr, td, th {margin: 0;border: 0;padding: 5px;border-collapse: collapse;}
 
 li {
     list-style-type: none;
-    border: 2px solid #d58c84;
+    border: 2px solid #768182;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 5px 5px 5px #dbc;
     padding: 5px 5px 5px 5px;
 }
 
@@ -27,17 +23,18 @@ li:hover {
 }
 
 .localStream {
-  display: inline-block;
+  display: block;
   top: 15px;
   right: 15px;
   float: right;
 }
 
 .localStream video {
-    border: 5px solid rgb(119, 119, 119);
-    outline: 0px none;
+    border: 1px solid rgb(119, 119, 119);
+    outline: 0 none;
     height: 240px;
     width: 320px;
+    border-radius: 5px;
 }
 
 .remoteStreams{

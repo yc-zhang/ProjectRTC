@@ -2,14 +2,12 @@ module.exports = function(app, streams) {
 
   // GET home 
   var streams = function(req, res) {
-    res.render('index', { 
-                          title: 'Project RTC', 
-                          header: 'WebRTC live streaming',
-                          username: 'Username',
-                          share: 'Share this link',
-                          footer: 'pierre@chabardes.net',
-                          id: req.params.id
-                        });
+    res.render('index', {
+        title: 'streams',
+        id: req.params.id,
+        streams_flag: true,
+        username: 'Wenting'
+    });
   };
 
   // GET streams as JSON
@@ -22,12 +20,14 @@ module.exports = function(app, streams) {
   };
 
   var welcome = function (req, res) {
-      res.render('welcome', {title: 'Ruak Streams: welcome and talk to the others.'});
+      res.render('welcome', {
+          title: 'welcome and talk to the others.',
+          home_flag: true
+      });
   };
 
   app.get('/streams.json', displayStreams);
   app.get('/', welcome);
   app.get('/streams', streams);
-  // app.get('/', index);
   app.get('/streams/:id', streams);
 };
