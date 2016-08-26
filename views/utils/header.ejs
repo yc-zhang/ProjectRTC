@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="projectRtc">
+<head>
+    <title>Rauk Stream: <%= title %></title>
+    <base href="/"/>
+    <link rel='stylesheet' href='/stylesheets/semantic.min.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript" src="javascripts/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+            <a class="item <% if (typeof(home_flag) != "undefined" && home_flag) { %> active <% } %>" href="/">Home</a>
+            <a class="item <% if (typeof(streams_flag) != "undefined" && streams_flag) { %> active <% } %>" href="/streams">Streams</a>
+            <a class="item" href="/me">Me</a>
+            <a class="item" href="/aboutus">About Us</a>
+            <div class="right item">
+                <button class="ui inverted olive basic button">Log In</button>
+                <button class="ui inverted green basic button" style="margin-left: 5px;">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
